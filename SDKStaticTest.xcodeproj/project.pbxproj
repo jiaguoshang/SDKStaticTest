@@ -13,8 +13,9 @@
 		534F5E35222E513200A7BB0F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 534F5E34222E513200A7BB0F /* Assets.xcassets */; };
 		534F5E38222E513200A7BB0F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 534F5E36222E513200A7BB0F /* LaunchScreen.storyboard */; };
 		534F5E3B222E513200A7BB0F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 534F5E3A222E513200A7BB0F /* main.m */; };
-		534F5E47222E538700A7BB0F /* libSDKStaticDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 534F5E46222E538700A7BB0F /* libSDKStaticDemo.a */; };
 		534F5E54222E723F00A7BB0F /* SDKDemoBundle.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 534F5E53222E723F00A7BB0F /* SDKDemoBundle.bundle */; };
+		536CCF25222F787400850749 /* libSDKStaticDemo-Release.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 536CCF23222F787400850749 /* libSDKStaticDemo-Release.a */; };
+		536CCF26222F787400850749 /* libSDKStaticDemo-Debug.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 536CCF24222F787400850749 /* libSDKStaticDemo-Debug.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,9 +32,10 @@
 		534F5E43222E537000A7BB0F /* SDKStaticDemo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDKStaticDemo.h; sourceTree = "<group>"; };
 		534F5E44222E537000A7BB0F /* SDKDemo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDKDemo.h; sourceTree = "<group>"; };
 		534F5E45222E537000A7BB0F /* SDKDemoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDKDemoViewController.h; sourceTree = "<group>"; };
-		534F5E46222E538700A7BB0F /* libSDKStaticDemo.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libSDKStaticDemo.a; sourceTree = "<group>"; };
 		534F5E52222E6BAE00A7BB0F /* TestTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestTool.h; sourceTree = "<group>"; };
 		534F5E53222E723F00A7BB0F /* SDKDemoBundle.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = SDKDemoBundle.bundle; sourceTree = "<group>"; };
+		536CCF23222F787400850749 /* libSDKStaticDemo-Release.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libSDKStaticDemo-Release.a"; sourceTree = "<group>"; };
+		536CCF24222F787400850749 /* libSDKStaticDemo-Debug.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libSDKStaticDemo-Debug.a"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -41,7 +43,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				534F5E47222E538700A7BB0F /* libSDKStaticDemo.a in Frameworks */,
+				536CCF25222F787400850749 /* libSDKStaticDemo-Release.a in Frameworks */,
+				536CCF26222F787400850749 /* libSDKStaticDemo-Debug.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -69,7 +72,6 @@
 			isa = PBXGroup;
 			children = (
 				534F5E41222E537000A7BB0F /* include */,
-				534F5E46222E538700A7BB0F /* libSDKStaticDemo.a */,
 				534F5E2B222E512D00A7BB0F /* AppDelegate.h */,
 				534F5E2C222E512D00A7BB0F /* AppDelegate.m */,
 				534F5E2E222E512D00A7BB0F /* ViewController.h */,
@@ -98,6 +100,8 @@
 				534F5E43222E537000A7BB0F /* SDKStaticDemo.h */,
 				534F5E44222E537000A7BB0F /* SDKDemo.h */,
 				534F5E45222E537000A7BB0F /* SDKDemoViewController.h */,
+				536CCF24222F787400850749 /* libSDKStaticDemo-Debug.a */,
+				536CCF23222F787400850749 /* libSDKStaticDemo-Release.a */,
 			);
 			path = SDKStaticDemo;
 			sourceTree = "<group>";
@@ -327,6 +331,7 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/SDKStaticTest",
+					"$(PROJECT_DIR)/SDKStaticTest/include/SDKStaticDemo",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = BitInfo.SDKStaticTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -348,6 +353,7 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/SDKStaticTest",
+					"$(PROJECT_DIR)/SDKStaticTest/include/SDKStaticDemo",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = BitInfo.SDKStaticTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
